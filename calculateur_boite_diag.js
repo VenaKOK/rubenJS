@@ -22,26 +22,42 @@ function calculatrice(){
     while (isNaN(a));
 
     do {
-        b  = prompt('entrez le 2er nombre');
+        b  = prompt('entrez le 2eme nombre');
     }
     while (isNaN(b));
     a = parseInt(a);
     b = parseInt(b);
+
+    function addition (a,b){
+        return a+b;
+    }
+
+    function soustraction (a,b){
+        return a-b;
+    }
+
+    function multiplication (a,b){
+        return a*b;
+    }
+
+    function division (a,b){
+        if (!b==0){
+            return a/b;
+        }else return "operation impossible";
+        
+    }
     switch (operation) {
         case 'addition':
-            alert(a+b);
+            alert(addition(a,b));
         break;
         case 'soustraction':
-            alert(a-b);
+            alert(soustraction(a,b));
         break;
         case 'multiplication':
-            alert(a*b);
+            alert(multiplication(a,b));
         break;
         case 'division':
-            if(!b==0){
-                alert(a/b);
-            }else alert('operation impossible')
-            
+            alert(division(a,b));
         break;
     }
     let recommencer = prompt("nouvelle operation : oui - non");
