@@ -38,9 +38,9 @@ function start() {
     console.log(rand);
     bntstart.style.display ="none";
     form.style.display ="block";
-    bntsubmit.style.display ="center";
-    textarea.style.display ="center";
     messages.textContent ="";
+    bntsubmit.style.visibility ="visible";
+    textarea.style.display ="block";
     count = 0;
 }
 
@@ -79,7 +79,7 @@ function verify() {
     }else {
         messages.textContent = `C'est gagné !!! Vous avez réussi au bout de ${count} tentatives`;
         bntstart.style.display ="block";
-        bntsubmit.style.display ="none";
+        bntsubmit.style.visibility ="hidden";
         textarea.style.display ="none";
     }
     textarea.value ="";
