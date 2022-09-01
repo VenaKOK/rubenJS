@@ -28,15 +28,20 @@ let textarea = document.querySelector("input");
 let bntstart = document.querySelector(".start");
 let messages= document.querySelector(".messages");
 let bntsubmit = document.querySelector(".submit");
+let form = document.querySelector("form");
 let count = 0;
-bntsubmit.style.display ="none";;
+form.style.display ="none";;
 
 let rand =0
 function start() {
     rand = Math.floor(Math.random()*1001);
     console.log(rand);
     bntstart.style.display ="none";
-    bntsubmit.style.display ="block";
+    form.style.display ="block";
+    bntsubmit.style.display ="center";
+    textarea.style.display ="center";
+    messages.textContent ="";
+    count = 0;
 }
 
 textarea.addEventListener("input", isNotaNumb)
@@ -52,7 +57,15 @@ function isNotaNumb() {
 
 bntstart.addEventListener("click", start)
 
-bntsubmit.addEventListener("click",verify)
+
+
+
+/* du coup le bouton soumettre sera plutot une input type=button value=submit ds le html */
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    verify();
+  /* ... tes intructions ... */
+});
 
 function verify() {
     count ++;
@@ -67,6 +80,7 @@ function verify() {
         messages.textContent = `C'est gagné !!! Vous avez réussi au bout de ${count} tentatives`;
         bntstart.style.display ="block";
         bntsubmit.style.display ="none";
+        textarea.style.display ="none";
     }
     textarea.value ="";
 }

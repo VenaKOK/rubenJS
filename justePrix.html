@@ -24,6 +24,14 @@
             margin: 3em;
             padding: 3em;
         }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background-color: #004a6f;
+        }
+
         h2{
             color: white;
             margin: 0.5em;
@@ -32,7 +40,7 @@
             font-size: larger;
             font-style: italic;
             font-weight: bolder;
-            
+            margin: 1em;
         }
 
         input {
@@ -56,20 +64,23 @@
 <body>
     <main>
         <section>
-        <h2>Bienvenue dans le high low game!</h2>
-        <h2>Le nombre généré est entre 1 - 1000</h2>
-        <div>
-            <input type="text" placeholder="Entrez un nombre entre 1 et 1000" maxlength="4">
-        </div>
-        <div>
-            <button class="start">Démarrer le jeu </button>
-        </div>
-        <div>
-            <button class="submit">Soumettre</button>
-        </div>
-        
-            <h3>Messages :</h3>
-            <p class="messages"></p>
+            <h2>Bienvenue dans le high low game!</h2>
+            <form>
+                <h2>Le nombre généré est entre 1 - 1000</h2>
+                <div>
+                    <input type="text" placeholder="Entrez un nombre entre 1 et 1000" maxlength="4" >
+                </div>
+                
+                <div>
+                    <button type="submit"  class="submit">soumettre</button>
+                </div>
+                
+                <h3>Messages :</h3>
+                <p class="messages"></p>
+            </form>
+            <div>
+                <button class="start">Démarrer le jeu </button>
+            </div>
         </section>
     </main>
     <script src="./justePrix.js"></script>
