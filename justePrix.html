@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            background-color: #004a6f;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #2b9f88;
+            width: 60%;
+            margin: 3em;
+            padding: 3em;
+        }
+        h2{
+            color: white;
+            margin: 0.5em;
+        }
+        p{
+            font-size: larger;
+            font-style: italic;
+            font-weight: bolder;
+            
+        }
+
+        input {
+            width: 13rem;
+            height: 10rem;
+            text-align: center;
+            
+        }
+        input::placeholder {
+            color: red;
+        }
+        button{
+            cursor: pointer;
+            margin: 0.5em;
+            width: 5em;
+            height: 5em;
+            box-shadow: 2px 2px 5px black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+        <h2>Bienvenue dans le high low game!</h2>
+        <h2>Le nombre généré est entre 1 - 1000</h2>
+        <div>
+            <input type="text" placeholder="Entrez un nombre entre 1 et 1000" maxlength="4">
+        </div>
+        <div>
+            <button class="start">Démarrer le jeu </button>
+        </div>
+        <div>
+            <button class="submit">Soumettre</button>
+        </div>
+        
+            <h3>Messages :</h3>
+            <p class="messages"></p>
+        </section>
+    </main>
+    <script src="./justePrix.js"></script>
+</body>
+</html>

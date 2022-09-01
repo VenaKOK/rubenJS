@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: linear-gradient(to right, rgb(53, 53, 163), rgb(238, 207, 105));
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1{
+            color: white;
+            font-size: 4em;
+            text-decoration: underline;
+        }
+        section {
+            color: blue;
+            text-align: center;
+            border: dashed blue 0.4em;
+            margin: 1em 10em ;
+            background-color: white;
+            padding: 2em;
+            min-width: 70%;
+            
+        }
+        .citation{
+            font-family: 'Dancing Script', cursive, sans-serif;
+            font-size: xx-large;
+        }
+        .citation::after, .citation::before{
+            content: '"';
+        }
+        .source{
+            font-family: 'Permanent Marker', cursive, sans-serif;
+            font-size: larger;
+        }
+        button{
+            padding: 1em;
+            font-size: x-large;
+            background-color: blueviolet;
+            margin: 0%;
+            border-radius: 10px;
+            cursor:pointer;
+            box-shadow:2px 2px 3px rgb(7, 7, 7)
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Citations</h1>
+        <section>
+            <p class="citation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae temporibus fuga rerum laboriosam quasi fugit iusto? Nam harum quis enim sed minima inventore consectetur, dolorem, laboriosam quos reiciendis esse? Odit.</p>
+            <p class="source">Lorem ipsum dolor, adipisicing elit.</p>
+        </section>
+        <div>
+            <button class=" bouton"> Citation Suivante</button>
+            <button class="random">Random</button>
+        </div>
+    </main>
+    <script src="./citation.js"></script>
+</body>
+</html>
